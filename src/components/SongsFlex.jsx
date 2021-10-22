@@ -5,7 +5,10 @@ const SongsFlex = ({items, SearchLyrics, fetchLyrics, nextPage, total}) => {
     return (
         <div className='w-full'>
             <div className='w-full flex flex-col items-center'>
-                <h2 className='my-10 text-3xl bg-gradient-to-r from-transparent via-black w-3/4 md:w-2/5 py-5 text-center text-white to-transparent'>total : {total}</h2>
+                <div className='my-10 bg-gradient-to-r from-transparent via-black w-3/4 md:w-3/5 py-5 text-center text-white to-transparent'>
+                    <h2 className='text-3xl'>total : {total}</h2>
+                    <p>click on the card the see the lyrics</p>
+                </div>
                 {items.map(item=>(
                     <Song key={item.id} item={item} onClick={(artist,song)=>fetchLyrics(artist,song)} />
                 ))}

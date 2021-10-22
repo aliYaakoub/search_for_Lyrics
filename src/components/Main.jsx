@@ -56,8 +56,8 @@ const Main = () => {
             :
                 <div className="py-10 px-5">
                     <div className="shadow text-center  md:text-xl backdrop-filter backdrop-blur-3xl rounded-2xl p-10">
-                        {lyrics.map(phrase=>(
-                            <p>{phrase}</p>
+                        {lyrics.map((phrase,index)=>(
+                            <p key={index}>{phrase}</p>
                         ))}
                     </div>
                 </div>

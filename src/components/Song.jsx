@@ -17,7 +17,6 @@ const Song = ({item, onClick}) => {
 
     return (
         <div className='song-card relative shadow-2xl overflow-hidden flex flex-row my-5 cursor-pointer' onClick={()=>onClick(item.artist.name, item.title)}>
-            {}
             <img src={getImage()} alt="" />
             <div className='pl-2 md:pl-5 py-5 flex flex-col justify-around'>
                 <h1 className='sm:text-xl lg:text-2xl'>Song : {item.title}</h1>

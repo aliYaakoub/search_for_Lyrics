@@ -2,7 +2,7 @@ import React from 'react'
 
 const Input = ({term, setTerm, SearchLyrics}) => {
     return (
-        <div className='backdrop-filter p-5 rounded-3xl backdrop-blur-lg shadow flex flex-col w-4/5 sm:w-3/5 lg:w-2/5 my-10 transition-all'>
+        <div className='backdrop p-5 rounded-3xl  shadow flex flex-col w-4/5 sm:w-3/5 lg:w-2/5 my-10 transition-all'>
             <label htmlFor="song" className='text-center text-xl md:text-3xl pb-8'>Search for your loved songs</label>
             <div className='flex flex-row items-center bg-black pr-2 rounded-2xl'>
                 <input

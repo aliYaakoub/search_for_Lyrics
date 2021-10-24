@@ -12,11 +12,13 @@ const Song = ({item, onClick}) => {
     function calculateDuration(duration){
         const hours = Math.floor(duration/60);
         const minutes = duration % 60;
-        return hours<10 ? '0' + hours + ' : '+ minutes : hours + ' : ' + minutes;
+        const displayHours = hours<10 ? '0' + hours : hours;
+        const displayMinutes = minutes<10 ? '0' + minutes : minutes;
+        return displayHours + ' : ' + displayMinutes;
     }
 
     return (
-        <div className='song-card relative shadow-2xl overflow-hidden flex flex-row my-5 cursor-pointer' onClick={()=>onClick(item.artist.name, item.title)}>
+        <div className='song-card backdrop relative shadow-2xl overflow-hidden flex flex-row my-5 cursor-pointer' onClick={()=>onClick(item.artist.name, item.title)}>
             <img src={getImage()} alt="" />
             <div className='pl-2 md:pl-5 py-5 flex flex-col justify-around'>
                 <h1 className='sm:text-xl lg:text-2xl'>Song : {item.title}</h1>
